@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./fastApi_app:/app/fastApi_app
+      - ./dash_app:/app/dash_app
+    restart: always
